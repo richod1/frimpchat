@@ -1,9 +1,15 @@
 import Home from "./Home"
+import Room from "./Room"
+import {Route,Routes,Navigate} from "react-router-dom"
 
 function App() {
+
   return (
     <div className="App">
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/room/:roomID" element={<Room/>}/>
+      </Routes>
          
     </div>
   );
